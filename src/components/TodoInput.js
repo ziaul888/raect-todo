@@ -16,9 +16,9 @@ import React, { Component } from 'react'
                       </div>    
                    </div>
                    <input type="text" className="form-control text-capitalize" placeholder="add todo item"  />
-                   <button className="btn btn-block btn-primary mt-3"> SUBMIT</button>
+                   <button className="btn btn-block btn-primary mt-3"> ADD ITEM</button>
                 </div>
-               
+                
                 </form>
 
             </div>
