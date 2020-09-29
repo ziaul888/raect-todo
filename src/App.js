@@ -54,7 +54,7 @@ handleDelete=(id)=>{
             todo input
             </h3>
             <TodoInput item={this.state.item}        handleChange={this.handleChange}         handleSubmit={this.handleSubmit}          handleEdit={this.handleEdit} />
-            <Todolist item={this.state.item}         handleDelete={this.handleDelete}            clearList={this.clearList}
+            <Todolist items={this.state.items}         handleDelete={this.handleDelete}            clearList={this.clearList}
             handleEdit={this.handleEdit}/>
           </div>
            

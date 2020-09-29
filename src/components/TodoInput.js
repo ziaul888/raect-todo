@@ -15,7 +15,8 @@ import React, { Component } from 'react'
                           <i className="fas fa-book"/>
                       </div>    
                    </div>
-                   <input type="text" className="form-control text-capitalize" placeholder="add todo item"  />
+                   <input type="text" className="form-control text-capitalize" placeholder="add todo item"       value={item}
+                    onChange={handleChange} />
                    <button className="btn btn-block btn-primary mt-3"> ADD ITEM</button>
                 </div>
                 
