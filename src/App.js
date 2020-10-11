@@ -34,14 +34,19 @@ class App extends Component {
    editItem:false
  }, ()=>console.log(this.state));
 }  
-clearList=()=>{
-
+clearList =()=>{
+   this.setState({
+     items: []
+   });
 }  
 handleEdit=(id)=>{
 
 }  
 handleDelete=(id)=>{
-
+  const filteredItems = this.state.items.filter( item=>item.id !==id);
+  this.setState({
+    items:filteredItems
+  });
 }  
   render() {
     

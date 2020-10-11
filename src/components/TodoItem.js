@@ -14,7 +14,7 @@ import React, { Component } from 'react'
                        <i className="fas fa-pen"/>
 
                     </span>
-                   < span className="mx-2 text-danger" onClick={handleEdit}>
+                   < span className="mx-2 text-danger" onClick={handleDelete}>
                        <i className="fas fa-trash"/>
 
                     </span>
