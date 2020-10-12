@@ -39,8 +39,15 @@ clearList =()=>{
      items: []
    });
 }  
-handleEdit=(id)=>{
-
+handleEdit=(id)=> { 
+  const filteredItems = this.state.items.filter( item=>item.id !==id);
+  const selectedItem = this.state.items.find(item=>item.id === id);
+ this.setState({
+    items:filteredItems,
+    item:selectedItem.title,
+    id:id,
+    editItem:true
+ })
 }  
 handleDelete=(id)=>{
   const filteredItems = this.state.items.filter( item=>item.id !==id);
@@ -58,7 +65,7 @@ handleDelete=(id)=>{
             <h3 className="text-capitalize text-center">
             todo input
             </h3>
-            <TodoInput item={this.state.item}        handleChange={this.handleChange}         handleSubmit={this.handleSubmit}          handleEdit={this.handleEdit} />
+            <TodoInput item={this.state.item}        handleChange={this.handleChange}         handleSubmit={this.handleSubmit}          handleEdit={this.handleEdit} editItem={this.state.editItem} />
             <Todolist items={this.state.items}         handleDelete={this.handleDelete}            clearList={this.clearList}
             handleEdit={this.handleEdit}/>
           </div>

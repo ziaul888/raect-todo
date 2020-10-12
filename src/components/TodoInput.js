@@ -3,7 +3,7 @@ import React, { Component } from 'react'
  class TodoInput extends Component {
     
     render() {
-        const {item, handleChange, handleSubmit, handleEdit} = this.props;
+        const {item, handleChange, handleSubmit, editItem} = this.props;
 
         return (
             
@@ -17,7 +17,17 @@ import React, { Component } from 'react'
                    </div>
                    <input type="text" className="form-control text-capitalize" placeholder="add todo item"       value={item}
                     onChange={handleChange} />
-                   <button className="btn btn-block btn-primary mt-3"> ADD ITEM</button>
+                    <button
+                     type="submit"
+                    disabled={item ? false : true}
+                      className={
+                      editItem
+                      ? "btn btn-block btn-success mt-3"
+                :       "btn btn-block btn-primary mt-3 text-uppercase"
+                         }
+                                >
+                   {editItem ? "edit item" : "add item"}
+                        </button>
                 </div>
                 
                 </form>
